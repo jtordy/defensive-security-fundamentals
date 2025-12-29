@@ -2,9 +2,9 @@
 
 ## Description
 
-This repository demonstrates core Defensive Security Fundamentals through hands-on labs focused on passive reconnaissance (OSINT), cryptographic hashing, and encryption and integrity validation.
+This repository demonstrates core defensive security fundamentals through hands-on labs focused on passive reconnaissance (OSINT), cryptographic hashing, and encryption and integrity validation.
 
-The objective of this project is to showcase how defensive security analysts identify publicly exposed information, evaluate cryptographic weaknesses, and validate data confidentiality and integrity — all critical skills for SOC analysts, blue team members, and security operations professionals.
+The objective of this project is to showcase how defensive security analysts identify publicly exposed information, evaluate cryptographic weaknesses, and validate data confidentiality and integrity.
 
 All activities were conducted ethically using publicly available information, controlled lab environments, and intentionally vulnerable data.
 
@@ -87,12 +87,6 @@ All activities were conducted ethically using publicly available information, co
 ![Google dorks documents](screenshots/googledorks1.png)
 ![Google dorks employees](screenshots/googledorks2.png)
 
-Example queries used:
-
-    site:example.edu filetype:pdf
-    site:example.edu inurl:login
-    site:linkedin.com "Organization Name" "@example.edu"
-
 - Discovered indexed documents and PDFs
 - Identified login portals and directories
 - Mapped employee presence and email patterns
@@ -115,10 +109,6 @@ Example queries used:
 
 ![Linux hashing output](screenshots/linux_output.png)
 
-    echo -n 'P@ssw0rd123' | md5sum
-    echo -n 'P@ssw0rd123' | sha1sum
-    echo -n 'P@ssw0rd123' | sha256sum
-
 - Generated MD5, SHA-1, and SHA-256 hashes
 - Demonstrated deterministic output
 
@@ -135,8 +125,6 @@ Example queries used:
 ## Salting Demonstration
 
 ![Salt generation](screenshots/linux.png)
-
-    echo -n 'P@ssw0rd123' | rev
 
 - Generated salt using reversed password
 - Demonstrated impact on hash output
@@ -159,11 +147,6 @@ Example queries used:
 
 ![File creation](screenshots/linux_file_creation.png)
 ![File encryption](screenshots/linux_encrypt_file.png)
-
-    openssl enc -aes-256-cbc -salt \
-    -in secret_message.txt \
-    -out encrypted_message.enc \
-    -pass pass:MySecureKey123
 
 ---
 
